@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+    student-service:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: consul-client-student-service:1.0.0
+        container_name: consul-client-student-service-container
+        restart: always
+        ports:
+            - "9098:9098"
+        networks:
+            - project_network
+        environment:
+            - JAVA_OPTS=-Xms64m -Xmx256m
+
+networks:
+    project_network:
+        external: true
+
+# docker network list
+# docker network create project_network
+# docker network inspect project_network
+
+#docker save -o config-service-app-1.0.0.tar config-service-app:1.0.0
+#docker load -i config-service-app-1.0.0.tar

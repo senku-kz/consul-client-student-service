@@ -1,0 +1,4 @@
+### verify that the /getStudentDetailsForSchool/{schoolname} endpoint is up and running
+GET http://localhost:9098/getStudentDetailsForSchool/abcschool
+
+###

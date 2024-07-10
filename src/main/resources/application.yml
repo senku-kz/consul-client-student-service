@@ -1,0 +1,12 @@
+server:
+  port: 9098
+
+spring:
+  application:
+    name: spring-consul-client-student-service
+  cloud:
+    consul:
+      host: consul.local
+      port: 8500
+#      discovery:
+#        instance-id: consul-client-school-service-container
