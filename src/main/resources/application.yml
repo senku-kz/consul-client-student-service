@@ -8,5 +8,8 @@ spring:
     consul:
       host: consul.local
       port: 8500
+      discovery:
+        prefer-ip-address: true
+#        service-name: spring-consul-client-school-service
 #      discovery:
 #        instance-id: consul-client-school-service-container
